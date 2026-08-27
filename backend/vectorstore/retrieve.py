@@ -10,9 +10,9 @@ from embed_chunks import embed_chunks
 def retrieve_chunks(question, collection, k=3):
     """Embeds the question and returns the k closest matching chunks from the collection."""
     question_vector = embed_chunks(question)
-    results = collection.query( 
+    results = collection.query(
     query_embeddings=[question_vector.tolist()], # a list containing one vector
-    n_results=3 # ho-k many closest chunks to return ("top.k")
+    n_results=k # how many closest chunks to return ("top-k")
 )
     return results["documents"][0]
 

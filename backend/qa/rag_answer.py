@@ -15,10 +15,10 @@ from anthropic import Anthropic
 load_dotenv()
 client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
-def rag_answer(question, collection):
+def rag_answer(question, collection, k=3):
     """Retrieves relevant chunks for the question and asks Claude to answer using only that context."""
     # Retrieve relevant chunks from the collection based on the question
-    retrieved_chunks = retrieve_chunks(question, collection, k=3)
+    retrieved_chunks = retrieve_chunks(question, collection, k=k)
 
     # Joins chunks into one context string to be used as one input for the llm
     context = "\n\n".join(retrieved_chunks)
