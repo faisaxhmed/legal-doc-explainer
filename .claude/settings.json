@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(./venv/Scripts/python.exe backend/evaluation/run_eval_lease.py)",
-      "Bash(grep -nE \"sk-ant-[a-zA-Z0-9_-]{20,}|AKIA[0-9A-Z]{16}|api[_-]?key|secret|token\" EVALUATION.md)"
-    ]
-  }
-}

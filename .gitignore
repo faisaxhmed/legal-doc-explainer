@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .env
 backend/data/sample_docs/Los_tacos_contract.pdf
+.claude/
